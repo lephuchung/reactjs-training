@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
+import MyCpnTest from './examples/MyCpnTest';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <MyCpnTest> </MyCpnTest>
       </header>
     </div>
   );
