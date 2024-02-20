@@ -13,6 +13,11 @@ class MyCpnTest extends React.Component {
         })
     }
 
+    handleClickButton = () => {
+        console.log('hit the button');
+        alert('click me');
+    }
+
     render() {
         return (
             <>
@@ -28,6 +33,11 @@ class MyCpnTest extends React.Component {
                     <p>
                         I'm from {this.state['uni']}
                     </p>
+                </div>
+                <div className="third">
+                    <button onClick={() => this.handleClickButton()}>
+                        Click me!
+                    </button>
                 </div>
             </>
         )
