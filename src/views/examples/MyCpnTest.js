@@ -1,4 +1,5 @@
 import React from "react";
+import ChildCpn from "./ChildCpn";
 
 class MyCpnTest extends React.Component {
 
@@ -44,6 +45,10 @@ class MyCpnTest extends React.Component {
                         type="submit"
                         onClick={(event) => this.handleSubmit(event)} />
                 </form>
+
+                <ChildCpn name={"Child 1"} />
+                <ChildCpn name={"Child 2"} />
+                <ChildCpn name={"Child 3"} />
             </>
         )
     }
