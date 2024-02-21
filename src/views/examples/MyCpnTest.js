@@ -46,9 +46,15 @@ class MyCpnTest extends React.Component {
                         onClick={(event) => this.handleSubmit(event)} />
                 </form>
 
-                <ChildCpn name={"Child 1"} />
-                <ChildCpn name={"Child 2"} />
-                <ChildCpn name={"Child 3"} />
+                <ChildCpn
+                    name={"Child 1"}
+                    age={20} />
+                <ChildCpn
+                    name={"Child 2"}
+                    age={22} />
+                <ChildCpn
+                    name={"Child 3"}
+                    age={26} />
             </>
         )
     }
