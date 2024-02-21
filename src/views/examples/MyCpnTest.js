@@ -3,42 +3,47 @@ import React from "react";
 class MyCpnTest extends React.Component {
 
     state = {
-        name: 'Le Phuc Hung',
-        uni: 'Hust'
+        firstName: '',
+        lastName: ''
     }
 
-    handleOnChangeName = (event) => {
+    handleChangeFirstName = (event) => {
         this.setState({
-            name: event.target.value
+            firstName: event.target.value
         })
     }
 
-    handleClickButton = () => {
-        console.log('hit the button');
+    handleChangeLastName = (event) => {
+        this.setState({
+            lastName: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
         alert('click me');
+        console.log('check state>>>', this.state);
     }
 
     render() {
+        // console.log('check state>>>', this.state);
         return (
             <>
-                <div className="first">
-                    <input value={this.state.name} type="text"
-                        onChange={(event) => this.handleOnChangeName(event)} />
-                    <p>
-                        Hello from MyComponent Test,
-                        My name is {this.state.name}
-                    </p>
-                </div>
-                <div className="second">
-                    <p>
-                        I'm from {this.state['uni']}
-                    </p>
-                </div>
-                <div className="third">
-                    <button onClick={() => this.handleClickButton()}>
-                        Click me!
-                    </button>
-                </div>
+                <form>
+                    <label htmlFor="fname">First Name:</label><br />
+                    <input
+                        type="text"
+                        value={this.state.firstName}
+                        onChange={(event) => this.handleChangeFirstName(event)} /><br />
+                    <label htmlFor="lname">Last Name:</label><br />
+                    <input
+                        type="text"
+                        value={this.state.lastName}
+                        onChange={(event) => this.handleChangeLastName(event)} /><br />
+                    <input
+                        type="submit"
+                        onClick={(event) => this.handleSubmit(event)} />
+                </form>
             </>
         )
     }
