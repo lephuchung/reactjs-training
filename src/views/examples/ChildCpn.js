@@ -1,5 +1,6 @@
 import React from "react";
 
+// class Component
 class ChildCpn extends React.Component {
 
     state = {
