@@ -28,6 +28,9 @@ class ChildCpn extends React.Component {
                     Child Component: {name} - {age}
                 </div>} */}
 
+                {/* co the viet nhu sau
+                {showJobs === false && <>phan muon in neu [showJobs === false] dung} </>*/}
+
                 {showJobs === false ?
                     <>
                         <div><button onClick={() => this.handleShowHide()}>Show</button></div>
@@ -49,8 +52,6 @@ class ChildCpn extends React.Component {
                         <div><button onClick={() => this.handleShowHide()}>Hide</button></div>
                     </>
                 }
-
-
             </>
         )
     }
