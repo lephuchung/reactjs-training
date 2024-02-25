@@ -1,5 +1,6 @@
 import React from "react";
 import ChildCpn from "./ChildCpn";
+import ChildCpn2 from "./ChildCpn2";
 
 class MyCpnTest extends React.Component {
 
@@ -57,6 +58,12 @@ class MyCpnTest extends React.Component {
                     // abc = {this.state.arrJobs} co the dat ten khac
                     arrJobs={this.state.arrJobs}
                 />
+                {/* <ChildCpn2
+                    name={this.state.firstName}
+                    age={20}
+                    // abc = {this.state.arrJobs} co the dat ten khac
+                    arrJobs={this.state.arrJobs}
+                /> */}
             </>
         )
     }
