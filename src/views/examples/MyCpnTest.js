@@ -15,8 +15,20 @@ class MyCpnTest extends React.Component {
 
     addNewJob = (job) => {
         // console.log('check job from parent: ', job);
+        // 2 cach them job
+        let currentJob = this.state.arrJobs;
+        currentJob.push(job);
         this.setState({
-            arrJobs: [...this.state.arrJobs, job]
+            arrJobs: currentJob //cach 1
+            // arrJobs: [...this.state.arrJobs, job] //cach 2
+        })
+    }
+
+    deleteAJob = (job) => {
+        let currentJob = this.state.arrJobs;
+        currentJob = currentJob.filter(item => item.id !== job.id);
+        this.setState({
+            arrJobs: currentJob
         })
     }
 
@@ -30,6 +42,7 @@ class MyCpnTest extends React.Component {
                 <ChildCpn
                     // abc = {this.state.arrJobs} co the dat ten khac
                     arrJobs={this.state.arrJobs}
+                    deleteAJob={this.deleteAJob}
                 />
                 {/* <ChildCpn2
                     name={this.state.firstName}
