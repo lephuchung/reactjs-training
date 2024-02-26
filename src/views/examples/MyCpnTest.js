@@ -32,6 +32,14 @@ class MyCpnTest extends React.Component {
         })
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        console.log('>>> run component did update: prev state: ', prevState, ' current state: ', this.state);
+    }
+
+    componentDidMount() {
+        console.log('>>> run component did mount');
+    }
+
     render() {
         // console.log('check state>>>', this.state);
         return (
