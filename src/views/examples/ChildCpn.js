@@ -19,8 +19,8 @@ class ChildCpn extends React.Component {
         let { age, name, arrJobs } = this.props; // react tu map bien cung ten voi props, khong quan trong thu tu gan
         let a = '';
         let { showJobs } = this.state;
-        let check = showJobs === true ? 'true' : 'false';
-        console.log('check showJobs: ', check);
+        // let check = showJobs === true ? 'true' : 'false';
+        // console.log('check showJobs: ', check);
         return (
             <>
                 {/* {<div>
@@ -42,7 +42,7 @@ class ChildCpn extends React.Component {
                                 a = arrJobs.map((item, index) => {
                                     return (
                                         <div key={item.id}>
-                                            {item.title} - {item.salary}
+                                            {item.title} - {item.salary}$
                                         </div>
                                     )
                                 })
