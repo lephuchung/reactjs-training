@@ -1,6 +1,8 @@
 .list-todo-container {
     button {
         cursor: pointer;
+        width: 50px;
+        margin: 5px;
 
     }
 
@@ -11,7 +13,7 @@
     }
 
     .list-todo-content {
-        width: 400px;
+        width: 600px;
         margin: 0px auto;
         text-align: left;
 
