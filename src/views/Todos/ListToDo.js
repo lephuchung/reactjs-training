@@ -34,9 +34,9 @@ class ListToDo extends React.Component {
         let { editTodo, listTodos } = this.state;
         let isEmptyObj = Object.keys(editTodo).length === 0;
 
-        if (isEmptyObj === false && editTodo.id == todo.id) {
+        if (isEmptyObj === false && editTodo.id === todo.id) {
             let listTodosCopy = [...listTodos];
-            let objIndex = listTodosCopy.findIndex(item => item.id == todo.id);
+            let objIndex = listTodosCopy.findIndex(item => item.id === todo.id);
 
             listTodosCopy[objIndex].title = editTodo.title;
 
@@ -80,7 +80,7 @@ class ListToDo extends React.Component {
                                     <div className="todo-child" key={item.id}>
                                         <button type="button" className="delete" onClick={() => this.handleDeleteTodo(item)}>Delete</button>
                                         <button type="button" className="edit" onClick={() => this.handleEditTodo(item)}>
-                                            {isEmptyObj === false && editTodo.id == item.id ?
+                                            {isEmptyObj === false && editTodo.id === item.id ?
                                                 <span>Save</span>
                                                 :
                                                 <span>Edit</span>
