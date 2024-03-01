@@ -14,8 +14,9 @@ function App() {
           Lê Phúc Hưng, hello world.
         </p>
         {/* <MyCpnTest> </MyCpnTest> */}
-        <ListToDo></ListToDo>
+        <ListToDo />
       </header>
+
       <ToastContainer
         position="top-right"
         autoClose={5000}
