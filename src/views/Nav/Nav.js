@@ -10,7 +10,7 @@ class Nav extends React.Component {
             <>
                 {/* Sử dụng Link hoặc NavLink sẽ  giúp trang không load lại mỗi lần nhấn link */}
                 <div className="topnav">
-                    <NavLink to='/' activeClassName='active' exact={true}>
+                    <NavLink to='/' activeClassName='active' exact={'true'}>
                         Home
                     </NavLink>
                     <NavLink to='/todo' activeClassName='active' >
@@ -18,6 +18,9 @@ class Nav extends React.Component {
                     </NavLink>
                     <NavLink to='/about' activeClassName='active' >
                         About
+                    </NavLink>
+                    <NavLink to='/user' activeClassName='active' >
+                        User
                     </NavLink>
                     {/* <Link to='/'>Home</Link>
                     <Link to='/todo'>Todos</Link>

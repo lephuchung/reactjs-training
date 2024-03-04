@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Nav from './Nav/Nav';
 import Home from './examples/Home';
+import ListUsers from './Users/ListUsers';
 import {
   BrowserRouter,
   Routes,
@@ -22,9 +23,10 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
 
           <Routes>
-            <Route path='/' exact element={<Home />} />
+            <Route path='/' exact={'true'} element={<Home />} />
             <Route path='/todo' element={<ListToDo />} />
             <Route path='/about' element={<MyCpnTest> </MyCpnTest>} />
+            <Route path='/user' element={<ListUsers />} />
           </Routes>
         </header>
 
