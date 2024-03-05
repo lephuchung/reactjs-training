@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import './ListUsers.scss';
+import { Link } from "react-router-dom";
 
 class ListUsers extends React.Component {
 
@@ -17,7 +18,7 @@ class ListUsers extends React.Component {
         this.setState({
             listUsers: res && res.data && res.data.data ? res.data.data : []
         })
-        console.log('check res >>>', res.data.data);
+        // console.log('check res >>>', res.data.data);
 
     }
 
@@ -33,14 +34,21 @@ class ListUsers extends React.Component {
                         listUsers.map((item, index) => {
                             return (
                                 <div key={item.id} className="child">
-                                    {index + 1} - {item.first_name} - {item.last_name}
+                                    <div className="child-info">
+                                        {index + 1} - {item.first_name} - {item.last_name}
+                                    </div>
+                                    <button className="child-btn">
+                                        <Link to={`/user/${item.id}`}>Detail</Link>
+                                        {/* <Link to='/user/3'>Detail</Link> */}
+                                    </button>
+
                                 </div>
                             )
                         })}
 
                 </div>
 
-            </div>
+            </div >
         )
     }
 }
